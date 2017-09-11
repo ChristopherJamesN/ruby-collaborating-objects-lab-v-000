@@ -9,6 +9,10 @@ class Artist
     @name = name
   end
 
+  def songs
+    @songs
+  end
+
   def add_song(song)
     @songs << song
     @@song_count += 1
@@ -24,10 +28,6 @@ class Artist
 
   def self.song_count
     @@song_count
-  end
-
-  def songs
-    @songs
   end
 
   def save
