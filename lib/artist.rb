@@ -39,12 +39,14 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    if @@all.each.name.include?(name) == true
-      self
-    else
-      artist = Artist.new(name)
-      artist.save
-      artist
+    @@all.each do |artist|
+      if artist.name == name
+        self
+      else
+        artist = Artist.new(name)
+        artist.save
+        return artist
+      end
     end
   end
 
