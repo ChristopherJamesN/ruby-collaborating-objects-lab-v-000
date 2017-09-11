@@ -10,8 +10,9 @@ class Song
     split_filename = filename.split(" - ")
     song = self.new
     song.name = split_filename[1]
-    song.artist_name = split_filename[0]
     song
+    song.artist_name = split_filename[0]
+
   end
 
   def artist_name=(name)
