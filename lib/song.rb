@@ -19,8 +19,8 @@ class Song
     song
   end
 
-  def artist
-    @artist
+  def artist=(artist)
+    @artist = artist
   end
 
 end
