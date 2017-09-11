@@ -16,7 +16,6 @@ class Song
     song = Song.new
     song.name=new_filename[1]
     song.artist_name = new_filename[0]
-    song
   end
 
   def artist=(artist)
