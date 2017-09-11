@@ -38,11 +38,7 @@ class Artist
     end
   end
 
-  def add_song(song)
-    @songs << song
-    @@song_count += 1
-    song.artist = self
-  end
+
 
   def self.find_or_create_by_name(name)
     @@all.each do |artist|
@@ -53,6 +49,12 @@ class Artist
     artist = Artist.new(name)
     artist.save
     artist
+  end
+
+  def add_song(song)
+    @songs << song
+    @@song_count += 1
+    song.artist = self
   end
 
 end
