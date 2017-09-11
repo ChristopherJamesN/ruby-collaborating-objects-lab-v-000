@@ -6,9 +6,9 @@ class Song
     @name = name
   end
 
-  def artist_name=(filename)
-    new_artist=Artist.find_or_create_by_name(filename)
-    new_artist.add_song_by_name(self.name)
+  def artist_name=(name)
+    new_artist=Artist.find_or_create_by_name(name)
+    new_artist.add_song(self)
   end
 
   def self.new_by_filename(filename)
