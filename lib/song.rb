@@ -11,7 +11,7 @@ class Song
     song = self.new
     song.name = split_filename[1]
     new_artist=Artist.find_or_create_by_name(split_filename[0])
-    new_artist.add_song(self)
+    new_artist.add_song(song)
     song
   end
 
