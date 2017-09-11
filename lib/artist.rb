@@ -40,7 +40,7 @@ class Artist
 
   def self.find_or_create_by_name(name)
     if @@all.include?(name) == true
-      self.name
+      self.object_id
     else
       artist = Artist.new(name)
       artist.save
