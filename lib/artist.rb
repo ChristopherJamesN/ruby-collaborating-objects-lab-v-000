@@ -44,6 +44,7 @@ class Artist
     else
       artist = Artist.new(name)
       artist.save
+      artist
     end
   end
 
