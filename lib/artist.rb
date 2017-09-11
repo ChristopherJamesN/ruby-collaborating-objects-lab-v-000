@@ -45,7 +45,7 @@ class Artist
       else
         artist = Artist.new(name)
         artist.save
-        return
+        return artist
       end
     end
   end
