@@ -43,10 +43,10 @@ class Artist
       if artist.name == name
         return self
       end
-      artist = Artist.new(name)
-      artist.save
-      artist
     end
+    artist = Artist.new(name)
+    artist.save
+    artist
   end
 
   def print_songs
