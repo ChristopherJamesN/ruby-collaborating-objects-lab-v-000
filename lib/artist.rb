@@ -42,11 +42,10 @@ class Artist
     @@all.each do |artist|
       if artist.name == name
         return self
-      else
-        artist = Artist.new(name)
-        artist.save
-        return artist
       end
+      artist = Artist.new(name)
+      artist.save
+      artist
     end
   end
 
