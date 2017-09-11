@@ -32,16 +32,7 @@ class Artist
     @@all
   end
 
-  def self.find_or_create_by_name(name)
-    @@all.each do |artist|
-      if artist.name == name
-        return self
-      end
-    end
-    artist = Artist.new(name)
-    artist.save
-    artist
-  end
+
 
   def print_songs
     @songs.each do |song|
@@ -53,6 +44,17 @@ class Artist
     @songs << song
     @@song_count += 1
     song.artist = self
+  end
+
+  def self.find_or_create_by_name(name)
+    @@all.each do |artist|
+      if artist.name == name
+        return self
+      end
+    end
+    artist = Artist.new(name)
+    artist.save
+    artist
   end
 
 end
