@@ -15,8 +15,12 @@ class MP3Importer
   end
 
   def import
+    library = []
     files
-    @list_of_filenames.each{|filename| Song.new_by_filename(filename)}
+    @list_of_filenames.each do |filename| 
+      library << Song.new_by_filename(filename)}
+    end
+    library
   end
 
 end
