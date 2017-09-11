@@ -39,7 +39,7 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    if @@all.include?(name.object_id) == true
+    if @@all.include?(self.name) == true
       self
     else
       artist = Artist.new(name)
